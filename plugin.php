@@ -148,8 +148,7 @@ function metadata_browser_get_active_cat($name) {
  * $id is an omeka "element_id" value for the element that will be serched
  *
  */
-function metadata_browser_create_link($name, $value) {
-	$id = metadata_browser_get_element_id($name);
+function metadata_browser_create_link($id, $value) {
 	// utility function to create browsing link for display in a theme 
 	// querystring based on current omeka advanced search linking
 	$clean_value = trim($value); // remove whitespace at start or end of string
@@ -157,6 +156,9 @@ function metadata_browser_create_link($name, $value) {
  	$resultsLink = '<a class="browse-link" href="' . $queryURL . '" title="Browse ' . $clean_value . '">' . $clean_value . "</a>";
   	return $resultsLink;
 }
+
+// create a link when display_name is passed instead of id value
+
 
 function metadata_browser_create_url($id, $value) {
 	/* returns just a URL to browse to a certain element value string
@@ -166,6 +168,17 @@ function metadata_browser_create_url($id, $value) {
 	$clean_value = trim($value); // remove whitespace at start or end of string
 	$queryURL = htmlspecialchars("items/browse?search=&advanced[0][element_id]=" . $id . "&advanced[0][type]=contains&advanced[0][terms]=" . $clean_value . "&range=&collection=&type=&tags=&submit_search=Search");
   	return $queryURL;
+}
+
+function metadata_browser_element_link($name,$value) {
+	/* takes element name and value to build link
+           for use primarily on "item/show page of theme
+        */
+	$id = metadata_browser_get_element_id($name);
+	$clean_value = trim($value); // remove whitespace at start or end of string
+        $queryURL = uri("items/browse?search=&advanced[0][element_id]=" . $id . "&advanced[0][type]=contains&advanced[0][terms]=" . $clean_value . "&range=&collection=&type=&tags=&submit_search=Search");
+        $resultsLink = '<a class="browse-link" href="' . $queryURL . '" title="Browse ' . $clean_value . '">' . $clean_value . "</a>";
+        return $resultsLink;
 }
 
 // need to define the routes 

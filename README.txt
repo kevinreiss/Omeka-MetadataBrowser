@@ -43,7 +43,7 @@
  
  
  *******Linking Instructions for Theme***************
- In show.php you currently need to go through each element value one-by-one in order to
+ In item/browse.php or item/show.php you currently need to go through each element value one-by-one in order to
  activate browsing for selected elements manually. It would be better to find a way
  to do this automatically via the show_item_metadata() helper function but at present 
  this is the way to do it. These linking instructions also work in the browse.php file 
@@ -55,7 +55,7 @@ Generic Model:
 	<div id="my-element-name" class="element">
 		<h3>My Element Name (Desired Public Value)</h3>
         <?php foreach($element as $value) {?>
-            <div class="element-text"><?php echo metadata_browser_create_link("My Element Name", $value);?></div>
+            <div class="element-text"><?php echo metadata_browser_element_link("My Element Name", $value);?></div>
         <?php }?>
     </div>
 <?php endif; ?>
@@ -66,7 +66,7 @@ Example for the Dublin Core Element "Creator":
 	<div id="dublin-core-creator" class="element">
 		<h3>Creator</h3>
         <?php foreach($creator as $value) {?>
-            <div class="element-text"><?php echo metadata_browser_create_link("Creator", $value);?></div>
+            <div class="element-text"><?php echo metadata_browser_element_link("Creator", $value);?></div>
         <?php }?>
     </div>
 <?php endif; ?>
