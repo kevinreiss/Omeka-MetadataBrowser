@@ -148,7 +148,8 @@ function metadata_browser_get_active_cat($name) {
  * $id is an omeka "element_id" value for the element that will be serched
  *
  */
-function metadata_browser_create_link($id, $value) {
+function metadata_browser_create_link($name, $value) {
+	$id = metadata_browser_get_element_id($name);
 	// utility function to create browsing link for display in a theme 
 	// querystring based on current omeka advanced search linking
 	$clean_value = trim($value); // remove whitespace at start or end of string

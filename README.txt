@@ -7,6 +7,7 @@
  * Create Browseable Omeka Categories
  * 
  * readme.txt
+ * Related Plugins - SortBrowseResults
  *
  * Covers how to use the MetadataBrowser plugin to create linking for selected omeka 
  * elements in "yourcurrenttheme/items/show.php or "yourcurrenttheme/items/browse.php" 
@@ -54,7 +55,7 @@ Generic Model:
 	<div id="my-element-name" class="element">
 		<h3>My Element Name (Desired Public Value)</h3>
         <?php foreach($element as $value) {?>
-            <div class="element-text"><?php echo metadata_browser_create_link(metadata_browser_get_element_id("My Element Name"), $value);?></div>
+            <div class="element-text"><?php echo metadata_browser_create_link("My Element Name", $value);?></div>
         <?php }?>
     </div>
 <?php endif; ?>
@@ -65,7 +66,7 @@ Example for the Dublin Core Element "Creator":
 	<div id="dublin-core-creator" class="element">
 		<h3>Creator</h3>
         <?php foreach($creator as $value) {?>
-            <div class="element-text"><?php echo metadata_browser_create_link(metadata_browser_get_element_id("Creator"), $value);?></div>
+            <div class="element-text"><?php echo metadata_browser_create_link("Creator", $value);?></div>
         <?php }?>
     </div>
 <?php endif; ?>
@@ -84,7 +85,7 @@ Example from browse.php:
 	<?php echo nav(array('Title' => uri('items/browse', array('sortby'=>'dc.title')), 'Category' => uri('category'), 'Tag' => uri('items/tags'), 'Creator' => uri('items/browse', array('sortby'=>'dc.creator')), 'Most Recent' => uri('items/browse', array('sortby'=>'omeka.modified', 'sortorder'=>'desc')))); ?>
 </ul>
 
-The value 'Category' => uri('category' needs to be added to the array passed to the nav() function. 
+The value 'Category' => uri('category') needs to be added to the array passed to the nav() function. 
 
 Note: The above example expects you have the "SortBrowseResults" plugin installed to enable sorting by
 field values like 'dc.title' and 'dc.creater'.
