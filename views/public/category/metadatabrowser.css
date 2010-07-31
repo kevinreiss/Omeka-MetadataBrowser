@@ -1,0 +1,18 @@
+@CHARSET "UTF-8";
+
+/* 
+   Kevin Reiss 3.30.2010
+
+   Category Browsing Options for the public theme display for elements
+   created by the MetadataBrowser plugin.
+   Optional styles that can be added to your theme's screen.css file.
+   Define your own using these class values if you like
+*/
+.metadataBrowserDisplay {margin-top:2em;clear:both;}
+.metadataBrowserDisplay ul {list-style:none; margin-left:0; padding-left:0; line-height:1.8em;}
+.metadataBrowserDisplay li {display:block;margin-right:8px; width:393px;}
+/* Make element values larger on main index display at /category */
+.top-category { font-size: 150%; }
+
+/* Make element value browsing options smaller than top-level categories */
+.category {font-size:120%;}
