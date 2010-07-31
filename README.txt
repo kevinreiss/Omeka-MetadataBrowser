@@ -29,7 +29,7 @@
  *
  *  See file *howtolink.txt* on how to activate browsing in theme "show" and "browse" views.
  *
- *  To Do:
+ *  To Do 7.31.2010 
  *  1. Add a description field to class to enable user-supplied definition rather than depend
  *     on element definition which can be very technical.
  *  2. Routes for individual element values a la wordpress
