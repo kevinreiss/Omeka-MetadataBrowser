@@ -24,7 +24,7 @@
  * value is taken directly from the "Elements" table by the "metadata_browser_generate_element_select"
  * utility method in plugin.php for the plugin.
  * 
- *  See file *howtolink.txt* on how to activate browsing in theme "show" and "browse" views.
+ *  See file *readme.txt* on how to activate browsing in theme "show" and "browse" views.
  *  
  *  To Do:
  *  1. Add a description field to class to enable user-supplied definition rather than depend

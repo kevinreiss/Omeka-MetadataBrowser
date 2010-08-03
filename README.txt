@@ -27,7 +27,7 @@
  * value is taken directly from the "Elements" table by the "metadata_browser_generate_element_select"
  * utility method in plugin.php for the plugin.
  *
- *  See file *howtolink.txt* on how to activate browsing in theme "show" and "browse" views.
+ *  See file *Linking Instructions for Themes* below `on how to activate browsing in theme "show" and "browse" views.
  *
  *  To Do 7.31.2010 
  *  1. Add a description field to class to enable user-supplied definition rather than depend
@@ -42,7 +42,7 @@
 
  
  
- *******Linking Instructions for Theme***************
+ *******Linking Instructions for Themes***************
  In item/browse.php or item/show.php you currently need to go through each element value one-by-one in order to
  activate browsing for selected elements manually. It would be better to find a way
  to do this automatically via the show_item_metadata() helper function but at present 
