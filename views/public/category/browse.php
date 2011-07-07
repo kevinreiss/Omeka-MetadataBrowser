@@ -1,6 +1,5 @@
 <?php
-//$elementID = $_GET['id'];
-// List all top level browsing categories and provide links to the them
+// Display all values in a given browsing category
 ?>
 <?php head(array('title' => 'Browse digitalMETRO by ' . $category->display_name, 'bodyclass' => 'metadatabrowser')); ?>
 
