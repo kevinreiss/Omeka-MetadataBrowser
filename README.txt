@@ -14,7 +14,7 @@
  * and add category browsing to your secondary theme navigation. At present these two steps
  * need to be done manually.
  *  
- * Tested on Omeka 1.2
+ * Tested on Omeka up to 1.3.2.
  *
  * Refactors the Omeka Elements table to produce browsable views of element content
  * in both the Admin and Public Interface. The elements have been renamed "categories"
